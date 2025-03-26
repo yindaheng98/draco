@@ -9,19 +9,15 @@
       "projectTarget": "draco_encoder.exe",
       "args": [
         "-i",
-        "${projectDir}/../../output/truck/point_cloud/iteration_30000/point_cloud.ply",
+        "${projectDir}/../../output/truck-scalable/point_cloud/iteration_30000/point_cloud_quantized.ply",
         "-o",
-        "${projectDir}/../../output/truck-draco/point_cloud/iteration_30000/point_cloud.drc",
+        "${projectDir}/../../output/truck-scalable/point_cloud/iteration_30000/point_cloud_quantized.drc",
         "-qp",
         "16",
-        "-qscale",
-        "5",
-        "-qrotation",
-        "8",
-        "-qopacity",
-        "6",
         "-point_cloud",
-        "-use_metadata"
+        "-use_metadata",
+        "-cl",
+        "0"
       ]
     },
     {
@@ -31,9 +27,9 @@
       "projectTarget": "draco_decoder.exe",
       "args": [
         "-i",
-        "${projectDir}/../../output/truck-draco/point_cloud/iteration_30000/point_cloud.drc",
+        "${projectDir}/../../output/truck-scalable/point_cloud/iteration_30000/point_cloud_quantized.drc",
         "-o",
-        "${projectDir}/../../output/truck-draco/point_cloud/iteration_30000/point_cloud.ply"
+        "${projectDir}/../../output/truck-scalable/point_cloud/iteration_30000/point_cloud_quantized.drc.decode.ply"
       ]
     }
   ]
